@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GSV Ingeniería | Presentación Creativa Meta Ads</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell" id="appShell">
+    <aside class="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">gsv</div>
+        <div>
+          <h1>GSV Ingeniería</h1>
+          <p>Presentación creativa Meta Ads · Junta Directiva</p>
+        </div>
+      </div>
+
+      <nav class="side-nav">
+        <a href="#hero">Inicio</a>
+        <a href="#summary">Resumen ejecutivo</a>
+        <a href="#feed">Feed interactivo</a>
+        <a href="#matrix">Matriz creativa</a>
+        <a href="#activation">Ruta de activación</a>
+      </nav>
+
+      <div class="presentation-note">
+        <span class="pill pill-live">Presentación dinámica</span>
+        <p>
+          Recorrido secuencial de los artes en lenguaje ejecutivo, con look &amp; feel tipo Facebook para socialización frente a junta directiva.
+        </p>
+      </div>
+
+      <div class="keyboard-shortcuts">
+        <h3>Atajos</h3>
+        <ul>
+          <li><kbd>←</kbd><kbd>→</kbd> Navegar</li>
+          <li><kbd>F</kbd> Board mode</li>
+          <li><kbd>Espacio</kbd> Auto-play</li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section class="hero" id="hero">
+        <div class="hero-copy">
+          <span class="section-kicker">Arquitectura creativa · Meta Ads</span>
+          <h2>Presentación interactiva de artes para <span>GSV Ingeniería</span></h2>
+          <p>
+            Vista ejecutiva de 20 piezas en orden, con <strong>nivel de conciencia</strong>, <strong>ángulo</strong>, <strong>copy</strong> y <strong>CTA</strong>. Diseñada para defender la estrategia frente a la junta directiva con una experiencia visual impecable.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-btn" id="startPresentation">Iniciar recorrido</button>
+            <button class="secondary-btn" id="toggleBoardMode">Board mode</button>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-card large">
+            <span>Formato</span>
+            <strong>Facebook-style creative review</strong>
+          </div>
+          <div class="hero-grid">
+            <div class="hero-card">
+              <span>Total de piezas</span>
+              <strong id="totalPieces">20</strong>
+            </div>
+            <div class="hero-card">
+              <span>Foco dominante</span>
+              <strong>Ahorro + conversión</strong>
+            </div>
+            <div class="hero-card">
+              <span>Ruta sugerida</span>
+              <strong>Frío · Tibio · Cierre</strong>
+            </div>
+            <div class="hero-card">
+              <span>Tono creativo</span>
+              <strong>Financiero + emocional + ambiental</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="summary" id="summary">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">Resumen ejecutivo</span>
+            <h3>Distribución estratégica de la creatividad</h3>
+          </div>
+          <p>Indicadores rápidos para contextualizar el portafolio de piezas antes de entrar al feed interactivo.</p>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span>Niveles de conciencia</span>
+            <div id="awarenessStats" class="stacked-stats"></div>
+          </article>
+          <article class="stat-card">
+            <span>Ruta de embudo</span>
+            <div id="phaseStats" class="stacked-stats"></div>
+          </article>
+          <article class="stat-card wide">
+            <span>Lectura ejecutiva</span>
+            <ul class="executive-bullets">
+              <li>Las piezas frías atacan dolor económico, presión por factura y miedo al endeudamiento.</li>
+              <li>Las piezas tibias convierten interés en intención mostrando acceso, facilidad y transformación del hogar.</li>
+              <li>Las piezas de cierre concentran beneficio, prueba de funcionamiento y CTA a WhatsApp.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="feed-section" id="feed">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">Feed interactivo</span>
+            <h3>Recorrido secuencial estilo Facebook</h3>
+          </div>
+          <p>Filtra por fase o nivel de conciencia, navega por los artes y presenta el racional creativo en tiempo real.</p>
+        </div>
+
+        <div class="toolbar">
+          <div class="filter-group">
+            <span>Fase</span>
+            <div class="chips" id="phaseFilters"></div>
+          </div>
+          <div class="filter-group">
+            <span>Conciencia</span>
+            <div class="chips" id="awarenessFilters"></div>
+          </div>
+          <div class="controller-group">
+            <button class="icon-btn" id="prevBtn" title="Anterior">←</button>
+            <button class="icon-btn" id="playBtn" title="Auto-play">▶</button>
+            <button class="icon-btn" id="nextBtn" title="Siguiente">→</button>
+          </div>
+        </div>
+
+        <div class="feed-layout">
+          <div class="facebook-stage">
+            <div class="facebook-shell">
+              <div class="facebook-topbar">
+                <div class="fb-logo">f</div>
+                <div class="search-pill">Meta Ads Creative Review</div>
+                <div class="top-icons">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="facebook-content">
+                <div class="post-card" id="postCard">
+                  <div class="post-header">
+                    <div class="page-avatar">G</div>
+                    <div>
+                      <strong>GSV Ingeniería</strong>
+                      <div class="subline">Patrocinado · Medellín, Colombia</div>
+                    </div>
+                    <button class="post-menu">•••</button>
+                  </div>
+
+                  <div class="post-caption">
+                    <span id="postTitleTag" class="post-title-tag"></span>
+                    <p id="postCopyPreview"></p>
+                  </div>
+
+                  <div class="image-frame" id="imageFrame">
+                    <img id="mainImage" src="" alt="Arte creativo GSV" />
+                    <button class="zoom-btn" id="zoomBtn">Ver grande</button>
+                  </div>
+
+                  <div class="post-footer">
+                    <div class="reaction-line">
+                      <div class="reactions"><span>👍</span><span>💚</span><span>⚡</span></div>
+                      <span id="reactionMeta">Relevancia creativa alta</span>
+                    </div>
+                    <div class="action-bar">
+                      <button>Me gusta</button>
+                      <button>Comentar</button>
+                      <button>Compartir</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="detail-panel">
+            <div class="detail-head">
+              <span class="detail-index" id="detailIndex">01 / 20</span>
+              <h4 id="detailTitle">Arte</h4>
+              <div class="meta-tags" id="metaTags"></div>
+            </div>
+
+            <div class="detail-card highlight">
+              <span>Nivel de conciencia</span>
+              <strong id="detailAwareness"></strong>
+            </div>
+            <div class="detail-card highlight">
+              <span>Ángulo</span>
+              <strong id="detailAngle"></strong>
+            </div>
+            <div class="detail-card">
+              <span>Copy sugerido</span>
+              <p id="detailCopy"></p>
+            </div>
+            <div class="detail-card cta-card">
+              <span>CTA recomendado</span>
+              <button id="detailCTA"></button>
+            </div>
+            <div class="detail-card">
+              <span>Lectura para junta</span>
+              <p id="boardInsight"></p>
+            </div>
+          </aside>
+        </div>
+
+        <div class="thumbnail-strip" id="thumbnailStrip"></div>
+      </section>
+
+      <section class="matrix-section" id="matrix">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">Matriz creativa</span>
+            <h3>Vista completa del portafolio</h3>
+          </div>
+          <p>Cada arte con su racional, listo para discusión estratégica o priorización comercial.</p>
+        </div>
+        <div class="matrix-grid" id="matrixGrid"></div>
+      </section>
+
+      <section class="activation-section" id="activation">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">Ruta de activación</span>
+            <h3>Qué presentar como recomendación final</h3>
+          </div>
+          <p>Organización propuesta para lanzamiento: piezas frías para captación, tibias para consideración y calientes para cierre.</p>
+        </div>
+
+        <div class="activation-columns" id="activationColumns"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" id="imageModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-body">
+      <button class="modal-close" id="modalClose">✕</button>
+      <img id="modalImage" src="" alt="Vista ampliada del arte" />
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
